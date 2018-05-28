@@ -94,6 +94,8 @@ window.open().document.write("<b>Kundenummer: </b>" + knr
 							+ "<b>Status på port: </b>" + portStatus
 							+ "</br></br> "
 							+ "<b>Har sambandet fungert før: </b>"
+			     				+ "</br></br>"
+			     				+ "<b>Når ble sambandet koblet opp: </b>"
 							+ "</br></br>" 
 							+ "<b>Melding: </b>"
 							+ "</br></br>" 
