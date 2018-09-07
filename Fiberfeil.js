@@ -2,18 +2,22 @@ javascript:
 var knr = document.getElementById('customer-info-container').getElementsByClassName('col-md-8 col-xs-8')[0].getElementsByTagName('a')[0].innerHTML;
 var name = document.getElementById('customer-crm').getElementsByClassName('col-md-8 col-xs-8')[0].innerHTML;
 var kontaktInfo = document.getElementsByClassName('col-md-8 col-xs-8');
+var kontaktInfo2 = document.getElementsByClassName('col-md-4 col-xs-4');
 var mobilIndex;
 var mob;
 
-for (i = 0; i < kontaktInfo.length; i++)
+
+var contactPanel = document.getElementById('clarity-contact-panel-0').getElementsByClassName('row');
+for (i = 0; i < contactPanel.length; i++)
 {
-	if (kontaktInfo[i].innerHTML.includes("+47"))
+	if(contactPanel[i].innerHTML.includes("Mobil:"))
 	{
 		mobilIndex = i;
 	}
-	
 }
-var mob = kontaktInfo[mobilIndex].innerHTML;
+
+mob = document.getElementById('clarity-contact-panel-0').getElementsByClassName('col-md-8 col-xs-8')[mobilIndex].innerHTML;
+
 
 var postnr = document.getElementById('location-details-container').getElementsByClassName('col-md-8');
 var postnrBeskrivelse = document.getElementById('location-details-container').getElementsByClassName('col-md-4');
@@ -94,12 +98,12 @@ window.open().document.write("<b>Kundenummer: </b>" + knr
 							+ "<b>Status på port: </b>" + portStatus
 							+ "</br></br> "
 							+ "<b>Har sambandet fungert før: </b>"
-			     				+ "</br></br>"
-			     				+ "<b>Når ble sambandet koblet opp: </b>"
+			     			+ "</br></br>"
+			     			+ "<b>Når ble sambandet koblet opp: </b>"
+							+ "</br></br>"
+							+ "<b>Hvilken entreprenør: </b>"
 							+ "</br></br>" 
 							+ "<b>Melding: </b>"
 							+ "</br></br>" 
 							+ "<b>Portstatus fra prov: </b>" 
 							);
-							
-							
