@@ -3,7 +3,7 @@ var knr = document.getElementById('customer-info-container').getElementsByClassN
 var name = document.getElementById('customer-crm').getElementsByClassName('col-md-8 col-xs-8')[0].innerHTML;
 var kontaktInfo = document.getElementsByClassName('col-md-8 col-xs-8');
 var kontaktInfo2 = document.getElementsByClassName('col-md-4 col-xs-4');
-var mobilIndex;
+var mobilIndex = "tom";
 var mob;
 
 
@@ -15,8 +15,13 @@ for (i = 0; i < contactPanel.length; i++)
 		mobilIndex = i;
 	}
 }
+if(mobilIndex != "tom")
+{
+	mob = document.getElementById('clarity-contact-panel-0').getElementsByClassName('col-md-8 col-xs-8')[mobilIndex].innerHTML;
+} else {
+	mob = "Mangler mobilnummer";
+}
 
-mob = document.getElementById('clarity-contact-panel-0').getElementsByClassName('col-md-8 col-xs-8')[mobilIndex].innerHTML;
 
 
 var postnr = document.getElementById('location-details-container').getElementsByClassName('col-md-8');
