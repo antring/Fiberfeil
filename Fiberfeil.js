@@ -107,4 +107,3 @@ window.open().document.write("<b>Kundenummer: </b>" + knr
 							+ "</br></br>" 
 							+ "<b>Portstatus fra prov: </b>" 
 							);
-							
